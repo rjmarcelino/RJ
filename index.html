@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10101c">
+  <meta name="description" content="All my social links in one place.">
+
+  <title>Daxdotes | My Links</title>
+
+  <style>
+    /* ==================================
+       1. CUSTOMIZE YOUR WEBSITE HERE
+       ================================== */
+
+    :root {
+      --background: #10101c;
+      --card: rgba(255, 255, 255, 0.06);
+      --button: rgba(255, 255, 255, 0.08);
+      --button-hover: rgba(139, 92, 246, 0.25);
+      --accent: #a78bfa;
+      --text: #ffffff;
+      --muted: #b8b5ca;
+      --border: rgba(255, 255, 255, 0.12);
+      --radius: 18px;
+      --content-width: 460px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 48px 18px;
+      color: var(--text);
+      background:
+        radial-gradient(
+          circle at top,
+          #30204d 0%,
+          var(--background) 48%
+        );
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    a, button {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--content-width);
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .avatar {
+      width: 112px;
+      height: 112px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid var(--accent);
+      box-shadow: 0 0 35px #8b5cf655;
+    }
+
+    h1 {
+      margin: 20px 0 8px;
+      font-size: clamp(28px, 7vw, 36px);
+      letter-spacing: -1px;
+    }
+
+    .bio {
+      color: var(--muted);
+      line-height: 1.7;
+      margin: 0 auto 28px;
+    }
+
+    .links {
+      display: grid;
+      gap: 12px;
+    }
+
+    .link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+      min-height: 58px;
+      padding: 16px 20px;
+      color: var(--text);
+      background: var(--button);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      transition:
+        transform 180ms ease,
+        background 180ms ease,
+        border-color 180ms ease;
+      backdrop-filter: blur(12px);
+    }
+
+    .link:hover {
+      transform: translateY(-3px);
+      background: var(--button-hover);
+      border-color: var(--accent);
+    }
+
+    .link:focus-visible,
+    .share:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    .symbol {
+      color: var(--accent);
+      font-size: 19px;
+    }
+
+    .contact {
+      background: var(--accent);
+      color: #171326;
+      border-color: transparent;
+    }
+
+    .contact .symbol {
+      color: #171326;
+    }
+
+    .contact:hover {
+      background: #c4b5fd;
+      color: #171326;
+    }
+
+    .share {
+      margin-top: 20px;
+      padding: 10px 16px;
+      color: var(--muted);
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      cursor: pointer;
+    }
+
+    footer {
+      margin-top: 32px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        transition: none !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 34px 16px;
+      }
+
+      .avatar {
+        width: 96px;
+        height: 96px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+
+    <!-- 2. PROFILE -->
+    <img
+      class="avatar"
+      src="profile.jpg"
+      alt="My profile picture"
+      onerror="this.style.display='none'"
+    >
+
+    <h1>Daxdotes</h1>
+
+    <p class="bio">
+      Gaming • Streaming • Content Creation<br>
+      Welcome to my corner of the internet.
+    </p>
+
+    <!-- 3. SOCIAL LINKS -->
+    <nav class="links" aria-label="My social links">
+
+      <a class="link"
+         href="https://www.youtube.com/"
+         target="_blank"
+         rel="noopener noreferrer">
+        <span class="symbol">▶</span>
+        <span>YouTube Channel</span>
+      </a>
+
+      <a class="link"
+         href="https://www.tiktok.com/"
+         target="_blank"
+         rel="noopener noreferrer">
+        <span class="symbol">♪</span>
+        <span>TikTok Profile</span>
+      </a>
+
+      <a class="link"
+         href="https://discord.com/"
+         target="_blank"
+         rel="noopener noreferrer">
+        <span class="symbol">◈</span>
+        <span>Join My Discord</span>
+      </a>
+
+      <a class="link"
+         href="https://www.instagram.com/"
+         target="_blank"
+         rel="noopener noreferrer">
+        <span class="symbol">◎</span>
+        <span>Instagram</span>
+      </a>
+
+      <!-- ADD MORE LINKS BY COPYING AN <a> BLOCK -->
+
+      <button class="link contact"
+              type="button"
+              id="save-contact">
+        <span class="symbol">＋</span>
+        <span>Save My Contact</span>
+      </button>
+
+    </nav>
+
+    <button class="share" id="share-page" type="button">
+      Copy Website Link
+    </button>
+
+    <footer>
+      Made with care • Find me around the internet
+    </footer>
+
+  </main>
+
+  <script>
+    /* ==================================
+       4. YOUR CONTACT INFORMATION
+       ================================== */
+
+    const contact = {
+      name: "Daxdotes",
+      phone: "+639XXXXXXXXX",
+      email: "",
+      website: "https://YOUR-USERNAME.github.io"
+    };
+
+    document
+      .getElementById("save-contact")
+      .addEventListener("click", () => {
+
+        // Escape special characters in vCard text fields.
+        const escapeVCard = (value) =>
+          String(value).replace(/\\/g, "\\\\")
+            .replace(/\n/g, "\\n")
+            .replace(/,/g, "\\,")
+            .replace(/;/g, "\\;");
+
+        const lines = [
+          "BEGIN:VCARD",
+          "VERSION:3.0",
+          "FN:" + escapeVCard(contact.name),
+          "N:;" + escapeVCard(contact.name) + ";;;",
+          "TEL;TYPE=CELL:" + contact.phone
+        ];
+
+        if (contact.email) {
+          lines.push("EMAIL:" + escapeVCard(contact.email));
+        }
+
+        if (contact.website) {
+          lines.push("URL:" + escapeVCard(contact.website));
+        }
+
+        lines.push("END:VCARD");
+
+        const file = new Blob(
+          [lines.join("\r\n") + "\r\n"],
+          { type: "text/vcard;charset=utf-8" }
+        );
+
+        const url = URL.createObjectURL(file);
+        const link = document.createElement("a");
+
+        link.href = url;
+        link.download = "MyContact.vcf";
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+      });
+
+    /* ==================================
+       5. SHARE YOUR WEBSITE
+       ================================== */
+
+    document
+      .getElementById("share-page")
+      .addEventListener("click", async () => {
+
+        const button = document.getElementById("share-page");
+
+        try {
+          await navigator.clipboard.writeText(
+            window.location.href
+          );
+          button.textContent = "Website Link Copied!";
+        } catch {
+          window.prompt(
+            "Copy your website link:",
+            window.location.href
+          );
+        }
+      });
+  </script>
+</body>
+</html>
